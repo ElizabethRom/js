@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let num = 5;
+        // if (num%2) {
+        //     console.log('Число нечетное! ')
+        // } else {
+        //     console.log('Число четное! ')
+        // }
+
+        // let min = +prompt('Введите минуты','')
+        // if (min>=0 && min<14) {
+        //     alert(`Вы в первой четверти`)
+        // } else if(min>=15 && min<=29) {
+        //     alert(`Вы во второй четверти`)
+        // } else if(min>=30 && min<= 44){
+        //     alert(`Вы в третьей четверти`)
+        // } else if(min>=45 && min<= 59){
+        //     alert(`Вы в четвертой четверти`)
+        // } else {
+        //     alert(`Укажите значение от 1 до 59!`)
+        // }
+       
+        //  let hour = +prompt('Сколько сейчас времени?','')
+        //  if (hour<9 || hour>21) {
+        //     alert(`Офис не работает!`)
+        //  } else {
+        //     alert(`Офис  работает!`)
+        //  }
+
+        // let x = +prompt('Введите число:','')
+        // if (x !== 0){
+        //     alert(` ${1/x} - это одна десятая часть от вашего числа! `)
+        // } else {
+        //     alert(`На ноль делить нельзя!`)
+        // }
+
+        // let name = prompt('Введите свое имя','')
+        // if (name !== null && name !=='') {
+        //     alert (`Добрый вечер, ${name}`)
+        // } else {
+        //     alert (`Вы ничего не ввели!`)
+        // }
+
+        // let x = +prompt('Введите число:','');
+        // let result = (x !== 0) ? 1/x : 'Делить нельзя!';
+        // alert (result)
+
+        // let x = +prompt('Введите число:','');
+        // let z = +prompt('Введите число:','');
+        // let result = (x > z) ? x : z ;
+        // alert (result);
+
+        // let q = +prompt('Введите число:','');
+        // let result = (q%5) ? 'Число кратно 5' : 'Число не кратно 5';
+        // alert(result);
+
+        // let planet = prompt('Введите название вашей планеты','');
+        // let result = (planet == 'земля' || planet == 'Земля') ? 'Привет,землянин!' : 'Привет, инопланетянин';
+        // alert(result);
+
+        // let season = +prompt("Введите номер сезона:")
+        // switch(season) {
+        //     case 1: 
+        //     alert(`Зима`);
+        //     break;
+
+        //     case 2: 
+        //     alert(`Весна`);
+        //     break;
+
+        //     case 3: 
+        //     alert(`Лето`);
+        //     break;
+
+        //     case 4: 
+        //     alert(`Осень`);
+        //     break;
+            
+        //     default:
+        //         alert(`Неизвестное значение`);
+        // }
+
+        let rating = +prompt("Введите колличество баллов")
+        switch(true) {
+            case (rating>=90): 
+            alert(`A`);
+            break;
+
+            case (rating<=89 && rating>=80): 
+            alert(`B`);
+            break;
+
+            case (rating<=79 && rating>=70): 
+            alert(`C`);
+            break;
+
+            case (rating<=69 && rating>=60): 
+            alert(`D`);
+            break;
+
+            case (rating<=59): 
+            alert(`F`);
+            break;
+            
+            default:
+                alert(`Неизвестное значение`);
+        }
+    </script>
+</body>
+</html>
