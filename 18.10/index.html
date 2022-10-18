@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//         let k = 0;
+// let n = +prompt('Введите число','');
+// for(i=2; i<n; i++) {
+//     if(n%i == 0 ){
+//         k++;
+//     };
+// };
+// if( k == 0){
+//     alert(`Число простое`)
+// } else {
+//     alert(`Число составное`)
+// }
+
+// let i = 1, n = 5;
+// while(i<=n) {
+//     console.log(i);
+//     i+=1;
+// }
+
+// let number = parseInt(prompt('Введите число',''));
+// let summ = 0;
+// let k = 0;
+// while(number || number == 0) {
+//     summ+=number;
+//     number = parseInt(prompt('Введите число',''));
+//     k++ ;
+// }
+// alert(`среднее арифмитическое = ${summ/k}`);
+
+let number = parseInt(Math.abs(prompt('Введите число','')));
+let k = 0;
+while(number && number != 0) {
+    number = Math.floor(number/10);
+    k++;
+}
+alert(`В числе ${k} цифр`);
+    </script>
+</body>
+</html>
