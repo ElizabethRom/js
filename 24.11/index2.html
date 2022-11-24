@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+    <button id="add1">Добавить 1 параграф</button>
+<button id="add2">Добавить 2 параграф</button>
+<button id="rem">Удалить первый параграф</button>
+<button id="rem2">Удалить последний параграф</button>
+<div class="article"></div>
+    <div class="article"></div>
+ 
+    <script>
+        //создаем заголовок страницы
+        const elH1 = document.createElement('h1');
+        const txtH1 = document.createTextNode('Заголовок страницы');
+        //добавим текст в элемент
+        elH1.append(txtH1);
+        //добавим элемент на страницу 
+        const elArticle = document.querySelector('.article');
+        elArticle.append(elH1)
+
+
+        const elH2 = document.createElement('h2');
+        const txtH2 = document.createTextNode('Заголовок статьи');
+        elH2.append(txtH2);
+        elArticle.append(elH2);
+
+        add1.addEventListener('click', function(){
+            const elP1 = document.createElement('p');
+            elP1.textContent = 'Первый абзац блабал';
+            elArticle.append(elP1);
+        })
+        add2.addEventListener('click', function(){
+            const elP2 = document.createElement('p');
+            elP2.textContent = 'Второй абзац блабал';
+            elArticle.append(elP2);
+        })
+
+        rem.addEventListener('click', function(){
+           if(elArticle.querySelector('p')) elArticle.querySelector('p').remove()
+        });
+        rem2.addEventListener('click', function(){
+          const pAll = elArticle.querySelectorAll('p');
+          if(pAll[pAll.length-1]) pAll[pAll.length-1].remove();
+        })
+    </script>
+</body>
+</html>
