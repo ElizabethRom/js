@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    background-color: rgb(219, 236, 230);
+    color: rgb(24, 60, 60);
+    width: 500px;
+}
+.selected {
+  background-color: rgb(170, 215, 201);
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <ol>
+        <li>«Властелин колец» Джон Р. Р. Толкин</li>
+        <li>«Гордость и предубеждение» Джейн Остин</li>
+        <li>«Тёмные начала»	Филип Пулман</li>
+        <li>«Автостопом по галактике» Дуглас Адамс</li>
+        <li>«Джейн Эйр»	Шарлотта Бронте</li>
+        <li>«Над пропастью во ржи» Джером Сэлинджер</li>
+        <li>«Маленькие женщины»	Луиза Мэй Олкотт</li>
+    </ol>
+</div>
+
+    <script>
+
+li.addEventListener('click',function(){
+    li.classList.toggle('.selected');
+if(e.target.tagName == 'li'){
+        let selected = document.querySelector('.bookList .selected');
+        if(selected) selected.classList.remove('selected');
+        e.target.classList.add('selected');
+    }
+}
+})
+
+function setSelected(e) {
+    
+document.querySelector('.bookList').addEventListener('click',setSelected);
+
+    </script>
+</body>
+</html>

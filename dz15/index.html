@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+       html, body {
+            height: 100%;
+            width: 100%;
+       }
+        .container{
+            min-height: 50%;
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 3%;
+            padding: 3%;
+            background-color: rgb(223, 233, 242);
+        }
+        .question{
+            background-color: rgb(23, 17, 87);
+            color: rgb(209, 213, 216);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding: 20px;
+        }
+        .answer{
+            display: none;
+            background-color: rgb(23, 17, 87);
+            color: rgb(209, 213, 216);
+            border-top: solid 1px rgb(223, 233, 242) ;
+            padding: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="question"> <h2>Lorem ipsum dolor sit amet?</h2></div>
+        <div  class="answer"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, delectus!</p></div>
+    
+    <div class="question"><h2>Lorem ipsum dolor sit?</h2></div>
+        <div  class="answer"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium enim dicta perspiciatis laborum?</p></div>
+    
+    <div class="question"><h2>Lorem ipsum dolor sit amet consectetur?</h2></div>
+        <div  class="answer"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptas vitae facilis atque, vel autem iure facere laborum, adipisci quod, a aliquid omnis?</p></div>
+    
+    <div class="question"><h2>Lorem, ipsum dolor?</h2></div>
+        <div  class="answer"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non ipsam illo id magni, ratione delectus nam aliquid distinctio!</p></div>
+    
+</div>
+    <script>
+  const questions = document.getElementsByClassName('.question');
+  for(let i=0; i<questions.length; i++){
+    questions[i].addEventListener('click',function(){
+        this.classList.toggle('active');
+        let answer = this.nextElementSibling;
+        if(answer.style.display){
+            answer.style.display= block;
+        } else{
+            answer.style.display= none;
+        }
+    })
+  }
+    </script>
+</body>
+</html>
