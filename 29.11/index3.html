@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/28ced0cf82.js" crossorigin="anonymous"></script>
+    <style>
+        .item {
+        width: 100px;
+        height: 100px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        display: inline-block;
+        }
+        .item::before {
+        content: '\f004';
+        color: grey;
+        font-size: 20px;
+        font-family: "FontAwesome";
+        }
+        .item.add::before {
+        content: '\f004';
+        color: red;
+        font-size: 20px;
+        font-family: "FontAwesome";
+        }
+        </style>
+</head>
+<body>
+    <div class="products">
+        <div class="item" id="p1">Товар1</div>
+        <div class="item" id="p2">Товар2</div>
+        <div class="item" id="p3">Товар3</div>
+        <div class="item" id="p4">Товар4</div>
+        </div>
+        <h2> Товары из избранного</h2>
+        <button id="wishlistDisplay">Показать товары</button>
+        <div id="wishlistBox">
+        </div>
+    <script>
+    const itemAll =document.querySelectorAll('.item');
+    for(let item of itemAll){
+     item.addEventListener('click',function(e){
+        e.target.classList.toggle('add');
+        const wishlist = document.querySelectorAll('.add');//нашли все элементы с классом эдд
+        const arrList=[];
+        for(let elem of wishlist ){
+        const addList= {
+            id:elem.getAttribute('id'),
+            text: elem.textContent
+        };
+        arrList.push(addList);
+     }
+     console.log(arrList)
+     let strArrList = JSON.stringify(arrList);
+localStorage.setItem('wishlist', strArrList); //записали данные в локалсторже
+let list= localStorage.getItem('wishlist');//взяли
+    })
+}
+wishlistDisplay.addEventListener('click',function(){
+    wishlistBox.innerHTML='';
+    let list = localStorage.getItem('wishlist');
+    list = JSON.parse(list);
+    list.forEach(element => {
+        wishlistBox.innerHTML+=`<li>${element['text']}</li>` 
+    })
+})
+
+    </script>
+</body>
+</html>

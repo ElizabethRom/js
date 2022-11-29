@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .select{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing <b>elit.</b> Praesentium, magni officia, alias rem ex voluptates labore dolor doloremque fugit asperiores minus vitae harum repudiandae molestiae nulla natus totam? Dolor, ipsam. Quaerat consectetur illo aspernatur ipsum minus?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores atque mollitia non assumenda rem dolor soluta consequuntur voluptates, ut cupiditate. Repudiandae accusantium accusamus eaque adipisci consequuntur dolor quo laboriosam nemo maiores, dolores minima molestias nesciunt inventore dolore earum quidem! Odit, fugiat. Nostrum ad beatae quae, sit reprehenderit labore harum ullam necessitatibus voluptatibus unde consequuntur!</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, cumque voluptas corporis repellat repellendus non maxime dolores, nostrum, ad aspernatur recusandae reprehenderit eveniet explicabo.</p>
+<script>
+    const pAll=document.querySelectorAll('p');
+    for(let elem of pAll){
+     elem.addEventListener('click',function(e){
+        const sel=document.querySelectorAll('.select');
+        for(let select of sel){
+            select.classList.remove('select');
+        }
+        e.target.classList.toggle('select');
+        
+     })
+    }
+
+</script>
+</body>
+</html>
