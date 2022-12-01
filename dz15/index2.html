@@ -11,7 +11,7 @@
     color: rgb(24, 60, 60);
     width: 500px;
 }
-.selected {
+.select{
   background-color: rgb(170, 215, 201);
 }
     </style>
@@ -31,19 +31,13 @@
 
     <script>
 
-li.addEventListener('click',function(){
-    li.classList.toggle('.selected');
-if(e.target.tagName == 'li'){
-        let selected = document.querySelector('.bookList .selected');
-        if(selected) selected.classList.remove('selected');
-        e.target.classList.add('selected');
+ const listAll=document.querySelectorAll('li');
+    for(let elem of listAll){
+     elem.addEventListener('click',function(e){
+        const sel=document.querySelectorAll('.select');
+        e.target.classList.toggle('select'); 
+     })
     }
-}
-})
-
-function setSelected(e) {
-    
-document.querySelector('.bookList').addEventListener('click',setSelected);
 
     </script>
 </body>
